@@ -4,42 +4,50 @@ const generateCards = employees => {
     
     for(var i = 0; i < employees.length; i++){
         var role = employees[i].getRole();
-        if(role.includes('manager')){
+
+        if(role.includes('Manager')){
             htmlContent += 
                 '<div class="card" style="width: 18rem;">' +
                 '<div class="card-body">' +
                 '<h2 class="card-title employee-name">' + employees[i].name + '</h2>' +
-                '<h6>' + employees[i].getRole + '</h6>' + 
+                '<h6>Manager</h6>' + 
                 '<p class="card-text">ID: ' + employees[i].id + ' </p>' +
                 '<p class="card-text">Email: ' + employees[i].email+ ' </p>' +
-                '<p class="card-text">Office Number: ' + employees[i].officeNumber + ' </p>';
-        } else if(role.includes('engineer')){
+                '<p class="card-text">Office Number: ' + employees[i].officeNumber + ' </p>' +
+                '</div>' +
+                '</div>';
+        } else if(role.includes('Engineer')){
             htmlContent += 
                 '<div class="card" style="width: 18rem;">' +
                 '<div class="card-body">' +
                 '<h2 class="card-title employee-name">' + employees[i].name + '</h2>' +
-                '<h6>' + employees[i].getRole + '</h6>' + 
+                '<h6>Engineer</h6>' + 
                 '<p class="card-text">ID: ' + employees[i].id + ' </p>' +
                 '<p class="card-text">Email: ' + employees[i].email+ ' </p>' +
-                '<p class="card-text">Github: ' + employees[i].github + ' </p>';
-        } else if(role.includes('intern')){
+                '<p class="card-text">Github: ' + employees[i].github + ' </p>' +
+                '</div>' +
+                '</div>';
+        } else if(role.includes('Intern')){
             htmlContent += 
                 '<div class="card" style="width: 18rem;">' +
                 '<div class="card-body">' +
                 '<h2 class="card-title employee-name">' + employees[i].name + '</h2>' +
-                '<h6>' + employees[i].getRole + '</h6>' + 
+                '<h6>Intern</h6>' + 
                 '<p class="card-text">ID: ' + employees[i].id + ' </p>' +
                 '<p class="card-text">Email: ' + employees[i].email+ ' </p>' +
-                '<p class="card-text">School: ' + employees[i].school + ' </p>';
+                '<p class="card-text">School: ' + employees[i].school + ' </p>' +
+                '</div>' +
+                '</div>';
         }
     }
+
+    console.log(htmlContent);
   
     return htmlContent;
 };
 
-module.exports = function(employeeList) {
+module.exports = employeeList => {
     // destructure page data by section
-    // const { projects, about, ...header } = templateData;
   
     return `
     <!DOCTYPE html>
