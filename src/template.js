@@ -40,8 +40,6 @@ const generateCards = employees => {
                 '</div>';
         }
     }
-
-    console.log(htmlContent);
   
     return htmlContent;
 };
