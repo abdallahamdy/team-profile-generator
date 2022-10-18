@@ -6,7 +6,7 @@ const generateCards = employees => {
         var role = employees[i].getRole();
 
         if(role.includes('Manager')){
-            htmlContent += 
+             htmlContent += 
                 '<div class="card" style="width: 18rem;">' +
                 '<div class="card-body">' +
                 '<h2 class="card-title employee-name">' + employees[i].name + '</h2>' +
