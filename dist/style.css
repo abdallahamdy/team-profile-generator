@@ -12,6 +12,7 @@ header {
 
 .card {
     margin: 20px;
+    border: 2px black solid;
 }
 
 .content {
