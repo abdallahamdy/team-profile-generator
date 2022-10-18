@@ -1,0 +1,20 @@
+header {
+    border: 3px red solid;
+}
+
+.title-container {
+    border: 3px green solid;
+}
+
+.page-title {
+    text-align: center;
+}
+
+.card {
+    margin: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
